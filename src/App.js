@@ -1,29 +1,23 @@
 import React, { useEffect, useState } from 'react';
 import Header from './components/Header';
 import Game from './components/Game';
+import EndGame from './components/EndGame';
 
 import { CARDS } from './components/Cards';
 import './styles/App.css';
 
 function App() {
 
+  const cards = CARDS;
+
   const [score, setScore] = useState(0);
   const [maxScore, setMaxScore] = useState(0);
   const [selected, setSelected] = useState([]);
-  const cards = CARDS;
   const [shuffled, setShuffled] = useState(shuffle(cards));
+  const [endGame, setEndGame] = useState(false);
 
   function checkDuplicate(selected) {
     return new Set(selected).size !== selected.length;
-  }
-
-  const handleClick = (e) => {
-    const selection = e.target.id;
-    setSelected((prevSelect) =>
-      [...prevSelect, selection]
-    );
-    setScore((prevScore) => prevScore +1);
-    setShuffled(shuffle(cards));
   }
 
   function shuffle(array) {
@@ -37,6 +31,20 @@ function App() {
     return array;
   }
 
+  const handleClick = (e) => {
+    const selection = e.target.id;
+    setSelected((prevSelect) =>
+      [...prevSelect, selection]
+    );
+    setScore((prevScore) => prevScore + 1);
+    setShuffled(shuffle(cards));
+  }
+
+  const tryAgain = () => {
+    setEndGame((prev) => !prev);
+    setScore(()=> 0);
+  }
+
   useEffect(() => {
     let isDuplicate = checkDuplicate(selected);
     if (isDuplicate) {
@@ -44,15 +52,16 @@ function App() {
       if (score > maxScore) {
         setMaxScore(() => score);
       }
+      setEndGame((prev)=>!prev);
       setSelected(() => []);
-      setScore(() => 0);
     }
   }, [selected, maxScore, score]);
 
   return (
     <div>
       <Header score={score} maxScore={maxScore} />
-      <Game cards={shuffled} handleClick={handleClick} />
+      <Game cards={shuffled} handleClick={handleClick} endGame={endGame} />
+      <EndGame score={score} maxScore={maxScore} endGame={endGame} tryAgain={tryAgain}/>
     </div>
   );
 }

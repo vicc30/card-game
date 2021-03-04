@@ -1,70 +1,29 @@
-# Getting Started with Create React App
+# PROJECT: MEMORY CARD
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is my solution for the project Memory Card. This project is part of [Odin Project js Path](https://www.theodinproject.com/courses/javascript/).
 
-## Available Scripts
+## Instructions.
 
-In the project directory, you can run:
+[x] Create a new project using create-react-app.
 
-### `yarn start`
+[x] Your application should include a scoreboard, which counts the current score.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+  - Scoreboard is included in component `/src/components/Header.js`. It receive state score as props from `App.js` and render it. It is named as `score`
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+[x] Should include “Best Score”, which shows the best score you achieved thus far.
 
-### `yarn test`
+  - Best score is included in component `/src/components/Header.js`. It receive state score as props from `App.js` and render it. It is named as `maxScore`
+  
+[x] You also need a couple of cards that display images and possibly informational text.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+  - Cards are saved as array with image path, name, alt and id in `/src/components/Cards.js`
 
-### `yarn build`
+[x] There should be a function that displays the cards in a random order anytime a user clicks one.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+  - All the logic is in `/src/App.js`
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+[x] Set up Folder structure.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+[ ] Style Application.
 
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+  - Style are saved on folder `/src/styles`
