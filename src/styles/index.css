@@ -3,12 +3,39 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+  font-size: 16px;
 }
 
 body {
   text-align: center;
-  font-size: 16px;
+  font-size: 1rem;
+  background-color: black;
+  color: white;
 }
+
+/*Header*/
+
+.header {
+  padding: 1rem;
+}
+
+.header h1 {
+  font-size: 2.5rem;
+  border-bottom: solid white;
+  margin: 1rem;
+  padding-bottom: 1rem;
+}
+
+.header img {
+  max-height: 3.2rem;
+}
+
+.header p {
+  font-size: 1.2rem;
+}
+
+/*Card*/
 
 img {
   height: 15rem;
@@ -16,4 +43,63 @@ img {
 
 img:hover {
   cursor: pointer;
+}
+
+.game {
+  position: relative;
+  padding: 2rem; 
+  border: solid white;
+}
+
+.game .row {
+  display: flex;
+  flex-wrap: wrap; 
+}
+
+.game .card {
+  -ms-flex: 1 0 0%;
+  flex: 1 0 0%;
+  width: 13rem;
+  background-color: #EE4526;
+  padding: 0.7rem;
+  margin: 1rem;
+  border-radius: 1rem;
+  color: white;
+
+}
+
+.game .card p {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-top: 0.3rem;
+}
+
+/* End Game View */
+
+.end h3{
+  font-size: 2rem;
+  padding: 1.5rem;
+}
+
+.end p, .end span{
+  font-size: 1.5rem;
+}
+
+.end span {
+  color: #EE4526;
+}
+
+.end button {
+  padding: 0.5rem;
+  margin: 1.2rem 0;
+  cursor: pointer;
+  background-color: #EE4526;
+  border: none;
+  border-radius: 0.2rem;
+  color: white;
+  font-weight: 600;
+}
+
+.end button:hover {
+  background-color: blue;
 }

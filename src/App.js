@@ -36,23 +36,28 @@ function App() {
     setSelected((prevSelect) =>
       [...prevSelect, selection]
     );
-    setScore((prevScore) => prevScore + 1);
-    setShuffled(shuffle(cards));
+    setScore((prevScore) => {
+      if (!checkDuplicate(selected)) {
+        return prevScore + 1;
+      }
+    });
+    setShuffled((prev) => shuffle(prev));
   }
 
   const tryAgain = () => {
     setEndGame((prev) => !prev);
-    setScore(()=> 0);
+    setScore(() => 0);
   }
 
   useEffect(() => {
     let isDuplicate = checkDuplicate(selected);
-    if (isDuplicate) {
-      console.log("Finished");
-      if (score > maxScore) {
-        setMaxScore(() => score);
-      }
-      setEndGame((prev)=>!prev);
+    if (isDuplicate || selected.length === 12) {
+      setMaxScore(() => {
+        if (score > maxScore) {
+          return score
+        } else return maxScore;
+      });
+      setEndGame((prev) => !prev);
       setSelected(() => []);
     }
   }, [selected, maxScore, score]);
@@ -61,7 +66,7 @@ function App() {
     <div>
       <Header score={score} maxScore={maxScore} />
       <Game cards={shuffled} handleClick={handleClick} endGame={endGame} />
-      <EndGame score={score} maxScore={maxScore} endGame={endGame} tryAgain={tryAgain}/>
+      <EndGame score={score} maxScore={maxScore} endGame={endGame} tryAgain={tryAgain} />
     </div>
   );
 }
