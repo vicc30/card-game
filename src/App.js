@@ -67,6 +67,10 @@ function App() {
       <Header score={score} maxScore={maxScore} />
       <Game cards={shuffled} handleClick={handleClick} endGame={endGame} />
       <EndGame score={score} maxScore={maxScore} endGame={endGame} tryAgain={tryAgain} />
+      <div className="fixed">
+        <p>Made by Victor C.</p>
+        <p>Find Github the repo <a href="https://github.com/vicc30/card-game" alt="Github repo card game">here</a></p>
+      </div>
     </div>
   );
 }

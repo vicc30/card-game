@@ -47,25 +47,24 @@ img:hover {
 
 .game {
   position: relative;
-  padding: 2rem; 
+  padding: 2rem;
   border: solid white;
 }
 
 .game .row {
   display: flex;
-  flex-wrap: wrap; 
+  flex-wrap: wrap;
 }
 
 .game .card {
   -ms-flex: 1 0 0%;
   flex: 1 0 0%;
   width: 13rem;
-  background-color: #EE4526;
+  background-color: #ee4526;
   padding: 0.7rem;
   margin: 1rem;
   border-radius: 1rem;
   color: white;
-
 }
 
 .game .card p {
@@ -76,24 +75,25 @@ img:hover {
 
 /* End Game View */
 
-.end h3{
+.end h3 {
   font-size: 2rem;
   padding: 1.5rem;
 }
 
-.end p, .end span{
+.end p,
+.end span {
   font-size: 1.5rem;
 }
 
 .end span {
-  color: #EE4526;
+  color: #ee4526;
 }
 
 .end button {
   padding: 0.5rem;
   margin: 1.2rem 0;
   cursor: pointer;
-  background-color: #EE4526;
+  background-color: #ee4526;
   border: none;
   border-radius: 0.2rem;
   color: white;
@@ -102,4 +102,24 @@ img:hover {
 
 .end button:hover {
   background-color: blue;
+}
+
+/*Signature */
+
+div.fixed {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  border: none;
+  background: linear-gradient(#ee44267a, #ee44265b);
+  color: white;
+  z-index: 100;
+  border-radius: 5px;
+  font-size: 1rem;
+  padding-bottom: 0.3rem;
+}
+
+div.fixed a {
+  color: white;
 }

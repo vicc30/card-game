@@ -24,16 +24,20 @@ This project is my solution for the project Memory Card. This project is part of
 
 - [x] Set up Folder structure.
 
-- [ ] Style Application.
+- [x] Style Application.
 
   - Style are saved on folder `/src/styles`
 
 ## Resources
 
-* [Marvel Comics](https://www.marvel.com/).
+* Images - [Marvel Comics](https://www.marvel.com/).
 * [React Hooks Docs](https://reactjs.org/docs/hooks-intro.html)
 * [Odin Project Lesson: Hooks](https://www.theodinproject.com/courses/javascript/lessons/hooks)
 
+## Live preview
+
+Link for live preview:partying_face: :arrow_right: [Heroku](https://card-gm.herokuapp.com/):partying_face:
+
 ### Special Mentions :clap:
 
-Thank you to all OP Community :partying_face:, @Kevin and @Alex73 to always have time to give a feedback or solve a question. 
+Thanks to all OP Community :partying_face:, @Kevin and @Alex73 to always have time to give a feedback or solve a question. 
