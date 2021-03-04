@@ -13,3 +13,7 @@ body {
 img {
   height: 15rem;
 }
+
+img:hover {
+  cursor: pointer;
+}

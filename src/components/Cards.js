@@ -70,11 +70,5 @@ export const CARDS = [
         name: 'X-Men',
         image: '/assets/images/12.jpg',
         alt: 'X-Men'
-    },
-    {
-        id: 12,
-        name: 'Hulk',
-        image: '/assets/images/12.jpg',
-        alt: 'Hulk'
-    },
+    }
 ]
